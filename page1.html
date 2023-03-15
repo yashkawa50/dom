@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        * {
+            /* font-size: 20px; */
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+        .main {
+            align-items: center;
+            text-align: center;
+        }
+
+        .p1 {
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .p2 {
+            margin-top: 3px;
+            font-weight: 600;
+        }
+
+        .btn {
+            margin-top: 5px;
+        }
+
+        .next {
+            
+            margin-top: 9px;
+        }
+        .end{
+            justify-content: center;
+            align-items: center;
+            display: flex   ;
+        }
+
+        @media only screen and (min-width:375px){
+            .first{
+                width: 75%;
+            }
+        }
+        @media only screen and (max-width:375px){
+            .first{
+                width: 75%;
+            }
+        }
+        @media only screen and (min-width:768px){
+            .first{
+                width: 25%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container main">
+        <div class=" row image">
+            <div class="col-md-12">
+            <img src="lap5.jpg" width="25%" class="first">
+            <h3>
+                DELL 8gb RAM/512gb SSD
+            </h3>
+            <!-- wait -->
+            <p class="p1">
+                price : 45000/-
+            </p> 
+
+            <label style="font-weight: 600;">quantity :</label>
+            <select id="s1" class="s2">
+
+                <option value="1" class="yes">1</option>
+                <option value="2" class="yes">2</option>
+                <option value="3" class="yes">3</option>
+                <option value="4" class="yes">4</option>
+            </select>
+            <p id="yo" class="p2"></p>
+
+            <input type="submit" onclick="price()" class="btn">
+            </div>
+        </div>
+        <div class="next ">
+            <div class="row ">
+                <div class="col-md-4">
+                    <!-- <a href="page2.html" target="_blank"> -->
+                    <img src="lap5.jpg" width="75%">
+                    <h3> dell 8gb ram/256gb ssd</h3>
+                    <p class="p1">price : 45000/-</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="lap5.jpg" width="75%">
+                    <h3> dell 8gb ram/256gb ssd</h3>
+                    <p class="p1">price : 45000/-</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="lap5.jpg" width="75%">
+                    <h3> dell 8gb ram/256gb ssd</h3>
+                    <p class="p1">price : 45000/-</p>
+                </div>
+              </div>
+            
+
+        </div>
+    </div>
+    <div class="end">
+        <a href="homepage.html">
+        <input type="button" class="btny" value="home">
+        </a>
+    </div>
+    <script>
+
+
+
+        function price() {
+            const res = document.querySelector(".s2");
+            const yeh = document.getElementById("yo");
+            // console.log("value===>",res.value);
+
+            // const data= 90000
+            const data = 45000
+            // const data2= 45
+
+            if (res.value == 1) {
+                yeh.innerText = "price :" + ("price of this product====>", data * res.value);
+            }
+
+
+            if (res.value == 2) {
+                yeh.innerText = "price :" + ("price of this product====>", data * res.value);
+            }
+
+            if (res.value == 3) {
+                yeh.innerText = "price :" + ("price of this product====>", data * res.value);
+            }
+            if (res.value == 4) {
+                yeh.innerText = "price :" + ("price of this product====>", data * res.value);
+            }
+
+
+        }
+     
+        // function page1(){
+        //     const lu = document.querySelector(".next");
+        //     lu.innerHTML = '<a href="page2.html" target="_blanck">'+"."+'</a>'
+            
+        // 
+
+
+
+    </script>
+</body>
+
+</html>

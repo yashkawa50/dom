@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        width: 32%;
+        height: 50vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        margin-top: 10px;
+        /* transition: 1ms; */
+
+    }
+
+    .slide {
+        width: 100%;
+        height: 50vh;
+
+        position: absolute;
+        transition: 1s;
+    }
+
+    .anima {
+
+        /* border: black; */
+        width: 32%;
+        /* background-color: black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: black; */
+        margin-inline-start: 520px;
+        margin-top: 10px;
+    }
+
+    .box {
+        width: 11%;
+        height: 12px;
+        border: 1px solid black;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px
+    }
+
+    .btn1,
+    .btn2 {
+        margin-right: 15px;
+        width: 15%;
+        height: 32px;
+    }
+
+    .btn1 {
+        background-color: rgb(127, 223, 255);
+        color: black;
+    }
+
+    .btn1:hover {
+        /* background-color: white; */
+        background-color: rgb(161, 216, 192);
+        transition: 1s;
+    }
+
+    .btn2:hover {
+        /* background-color: rgb(127, 223, 255); */
+        background-color: rgb(127, 223, 255);
+        color: black;
+    }
+
+    .btn2 {
+        background-color: rgb(161, 216, 192);
+        transition: 1s;
+    }
+
+    .ani {
+        margin-top: 15px;
+        align-items: center;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        color: red;
+        text-align: center;
+        /* text-decoration:wavy; */
+        text-transform: uppercase;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    .img {
+        width: 33%;
+        height: 21vh;
+    }
+
+    .rt {
+        background-color: white;
+        /* width: 100%; */
+        color: black;
+    }
+
+    .rt:hover {
+        transform: translateY(-13px);
+        background-color: grey;
+        border-radius: 15px;
+        transition: 1s;
+    }
+    .end{
+            justify-content: center;
+            align-items: center;
+            display: flex   ;
+        }
+
+    @media only screen and (max-width:375px){
+        .main{
+            width: 100%;
+        }
+        .anima{
+            width: 100%;
+            margin-inline-start: 0px;
+        }
+        .img{
+            width: 40%;
+            height: 41vh;
+        }
+    }
+
+    @media only screen and (min-width:375px){ 
+        .main {
+            width: 100%;
+        }
+
+        .anima {
+            width: 100%;
+            margin-inline-start: 0px;
+        }
+
+        .btn1,
+        .btn2 {
+            width: 50%;
+        }
+
+        .img {
+            width: 40%;
+            height: 45vh;
+        }
+    } 
+
+      @media only screen and (min-width:768px) {
+        .main {
+            width: 32%;
+            height: 50vh;
+        }
+
+        .slide {
+            width: 100%;
+            height: 50vh;
+
+        }
+
+        .anima {
+            width: 32%;
+            margin-inline-start: 261px;
+            
+         }
+
+        .btn1,
+        .btn2 {
+            width: 25%;
+        }
+
+        .img {
+            width: 33%;
+            height: 21vh;
+        }
+        
+    } 
+
+   @media only screen and (min-width:1024px){
+    .main{
+        width:32%;
+        height:50vh;
+    }
+    .slide{
+        width: 100%;
+         height: 50vh
+    }
+    .anima{
+        width: 32%;
+        margin-inline-start: 512px;
+    }
+    .btn1,.btn2{
+        width: 15%;
+    }
+   }  */
+</style>
+
+<body>
+    <div class="  header">
+
+
+        <div class=" main">
+
+            <img src="lap1.jpg" alt="" class="slide">
+            <img src="lap2.jpg" alt="" class="slide">
+            <img src="lap3.jpg" alt="" class="slide">
+            <img src="lap4.jpg" alt="" class="slide">
+            <img src="lap5.jpg" alt="" class="slide">
+            <img src="ph1.webp" alt="" class="slide">
+            <img src="ph2.webp" alt="" class="slide">
+            <img src="ph3.webp" alt="" class="slide">
+            <img src="ph4.webp" alt="" class="slide">
+
+        </div>
+
+
+    </div>
+    <div class="anima">
+        <div class="box" id="a1" onclick="run(0)"></div>
+        <div class="box" id="a2" onclick="run(1)"></div>
+        <div class="box" id="a3" onclick="run(2)"></div>
+        <div class="box" id="a4" onclick="run(3)"></div>
+        <div class="box" id="a5" onclick="run(4)"></div>
+        <div class="box" id="a6" onclick="run(5)"></div>
+        <div class="box" id="a7" onclick="run(6)"></div>
+        <div class="box" id="a8" onclick="run(7)"></div>
+        <div class="box" id="a9" onclick="run(8)"></div>
+    </div>
+    <div class="btn">
+        <input type="button" class="btn1" onclick="prev()" value="prev">
+        <input type="button" class="btn2" onclick="next()" value="next">
+    </div>
+
+    <div style="overflow:hidden;">
+        <h1 class="animate__animated animate__rubberBand animate__delay-2s animate__transition2s animate__infinite">
+            discount offer</h1>
+
+        <div class=" row ani">
+
+            <div class="col-md-4 ani2">
+
+
+                <div class="rt">
+                    <img src="ph1.webp" class="img">
+
+                    <p>
+                        iphone-13<br>
+
+                        in* bank offer<br>
+                        5% off<br>
+                        <del> rs. 1,23,000/- </del> rs.1,15,000/-
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-md-4 ani2">
+
+
+                <div class="rt">
+                    <img src="ph2.webp" class="img">
+
+                    <p>
+                        redmi 11 prime<br>
+
+                        in* bank offer<br>
+                        15% off<br>
+                        <del> rs. 23,000/- </del> rs.21,000/-
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-md-4 ani2">
+
+
+                <div class="rt">
+                    <img src="ph4.webp" class="img">
+
+                    <p>
+                        realmi-narzo<br>
+
+                        in* bank offer<br>
+                        5% off<br>
+                        <del> rs. 17,000/- </del> rs.15,000/-
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="end">
+        <a href="homepage.html">
+        <input type="button" class="btny" value="home">
+        </a>
+    </div>
+
+
+    <script>
+        const sliders = document.querySelectorAll(".slide");
+        console.log(sliders);
+        let counter = 0;
+
+
+
+
+
+
+        sliders.forEach(
+            (slide, index) => {
+                slide.style.left = `${index * 100}%`;
+            }
+        )
+
+        function prev() {
+            counter--;
+            slideimage();
+        }
+        function next() {
+            counter++;
+            // alert();
+            slideimage();
+        }
+
+        function run(y) {
+            counter = y;
+
+            slideimage();
+        }
+
+        function slideimage() {
+            sliders.forEach(
+                (slide) => {
+                    slide.style.transform = `translateX(-${counter * 100}%)`;
+                }
+            )
+        }
+        setInterval(
+        () => {
+            if(counter<8){
+                counter++;
+            }
+            slideimage();
+            
+        },
+        4000
+        )
+        
+    </script>
+
+</body>
+
+</html>
